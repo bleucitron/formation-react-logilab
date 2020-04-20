@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Filter> matches complete snapshot 1`] = `
+<Filter
+  filter={[MockFunction]}
+  text="Filter"
+>
+  <button
+    onClick={[MockFunction]}
+  >
+    Filter
+  </button>
+</Filter>
+`;
+
+exports[`<Filter> matches shallow snapshot 1`] = `
+<button
+  onClick={[MockFunction]}
+>
+  Filter
+</button>
+`;
