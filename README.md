@@ -9,5 +9,6 @@ npx create-react-app test --template typescript
 ```
 
 ```bash
+npm install
 npm start
 ```
