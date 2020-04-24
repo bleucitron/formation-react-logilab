@@ -1,45 +1,53 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-type PersonProps = {
-  nom: string;
-  age: number;
+import tweets from './data/tweets.json'
+import TweetList, {TweetListProps} from './TweetList'
+import {TweetProps} from './Tweet'
+
+
+type ButtonProps = {
+  handle_click: any;
+  label: string;
 }
 
-const Person = (props: PersonProps) => {
-  const {nom, age} = props;
+const MyButton = (props: ButtonProps ) => {
   return (
-    <div className='Person'>
-      <div className='nom'>{nom}</div>
-      <div className='age'>{age}</div>
-    </div>
+    <button onClick={() => {props.handle_click()}}>{props.label}</button>
   );
 }
 
-type ColocProps = {
-  members:PersonProps[];
+
+type AppProps = {
+  data: TweetListProps;
 }
 
-const Coloc = ({members}: ColocProps) => {
-  return (
-    <div>
-    {members.map(x => <Person {...x} key={x.nom}/>)}
-    </div>
-  );
+type AppState = {
+  isFr: boolean;
 }
 
-const personnes: PersonProps[] = [
-  {
-    age:29,
-    nom:'Noé'
-  },
-  {
-    age:33,
-    nom:'Kentin'
+class App extends Component<AppProps, AppState>{
+  constructor(p:AppProps){
+    super(p)
+    this.state= {isFr:true}
   }
-]
+  render(){
+    const tweets = this.state.isFr ? this.props.data.tweets : this.props.data.tweets.filter((e: TweetProps) => e.lang === 'fr')
+    return (
+      <>
+        <MyButton label={this.state.isFr? 'Show en' : 'Show fr'}
+                  handle_click={() => {
+                      this.setState({isFr: !this.state.isFr})
+                    }
+                  }
+        />
+        <TweetList tweets={tweets} />
+      </>
+    )
+  }
+}
 
 ReactDOM.render(
-  <Coloc members={personnes} />,
+  <App data={{tweets:tweets}}/>,
   document.getElementById('root')
 );
