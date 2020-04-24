@@ -20,11 +20,9 @@ class TweetList extends Component<TweetListProps> {
   render(){
 
     return (
-    <>
       <div className='TweetList'>
         {this.props.tweets.map(x => <Tweet {... x} key={x.id_str}/>)}
       </div>
-    </>
   );
   }
 }
