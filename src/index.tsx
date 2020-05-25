@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App';
+import App from './AppHook';
 
 const urls = [
   'https://raw.githubusercontent.com/iOiurson/formation/correction/data/tweets.json',
