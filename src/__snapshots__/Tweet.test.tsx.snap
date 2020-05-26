@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tweet should match snapshots 1`] = `
+<li
+  className="Tweet"
+>
+  <div
+    className="text"
+  >
+    RT @benoithamon: Rien n'y fait. La condamnation de Monsanto par la justice américaine, la multiplication des cancers chez les enfants, les…
+  </div>
+  <div
+    className="date"
+  >
+    Sat Sep 15 07:09:51 +0000 2018
+  </div>
+  <div
+    className="user"
+  >
+    Romain l'Ourson
+  </div>
+</li>
+`;

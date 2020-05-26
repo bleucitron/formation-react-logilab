@@ -5,6 +5,7 @@ import AuthorFilter from './AuthorFilter';
 import Filter from './Filter';
 import { ITweet } from './Tweet';
 import TweetList from './TweetList';
+import ScaleLoader from 'react-spinners/ScaleLoader';
 
 interface AppProps {
   urls: string[];
@@ -86,7 +87,7 @@ class App extends React.Component<AppProps, AppState> {
         {tweetsToDisplay ? (
           <TweetList tweets={tweetsToDisplay} />
         ) : (
-          <p>Chargement</p>
+          <ScaleLoader />
         )}
       </div>
     );

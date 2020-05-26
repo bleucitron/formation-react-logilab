@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaTwitter } from 'react-icons/fa';
 
 interface User {
   name: string;
@@ -22,6 +23,7 @@ function Tweet(props: TweetProps) {
       <div className='text'>{text}</div>
       <div className='date'>{date}</div>
       <div className='user'>{user.name}</div>
+      <FaTwitter />
     </li>
   );
 }
