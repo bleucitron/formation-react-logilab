@@ -4,12 +4,13 @@ Basé sur [Create React App](https://github.com/facebook/create-react-app).
 
 Créé avec
 
-```
-npx create-react-app test --template typescript
+```bash
+npx create-react-app test --template typescript # création du projet
 ```
 
 ```bash
-npm start
+npm i # installation des dépendances
+npm start # lancement de l'environnement de développement
 ```
 
 Url des tweets:
