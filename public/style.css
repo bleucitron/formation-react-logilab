@@ -1,0 +1,14 @@
+.Person {
+  display: flex;
+  align-items: center;
+}
+
+.Person h1 {
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+.Person h2 {
+  font-size: 1rem;
+  color: blue;
+}
