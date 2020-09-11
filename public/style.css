@@ -1,14 +1,46 @@
-.Person {
-  display: flex;
-  align-items: center;
+.TweetList {
+  list-style: none;
+  padding: 0 0.5rem;
 }
 
-.Person h1 {
-  font-size: 1rem;
+.Tweet {
+  margin: 1rem 0.5rem;
+  padding: 1rem;
+  background: lightblue;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Authors {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.Authors li {
   margin: 0 0.5rem;
 }
 
-.Person h2 {
-  font-size: 1rem;
-  color: blue;
+.selected {
+  color: white;
+  background: black;
+}
+
+.Tweet:hover {
+  background: darkblue;
+  color: lightblue;
+}
+
+.Tweet .date {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.Tweet .text {
+  font-size: 1.1rem;
+}
+
+.Tweet .author {
+  font-weight: bold;
+  font-size: 0.9rem;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 interface User {
   name: string;
@@ -15,9 +16,11 @@ export interface TweetProps {
 export default function Tweet({ full_text, created_at, user }: TweetProps) {
   return (
     <li className='Tweet'>
-      <div>{full_text}</div>
-      <div>{created_at}</div>
-      <div>{user.name}</div>
+      <div className='text'>{full_text}</div>
+      <div className='date'>
+        {moment(created_at, 'ddd MMM DD HH:mm:ss ZZ YYYY').fromNow()}
+      </div>
+      <div className='author'>{user.name}</div>
     </li>
   );
 }
